@@ -1,0 +1,8 @@
+<p>read-jsonasync works!</p>
+
+<h1>Displaying Data using async pipe </h1>
+ <ul>
+       <li *ngFor="let frnd of (result | async)">
+         {{frnd.name}} is {{frnd.age}} years old.
+       </li>
+     </ul>
