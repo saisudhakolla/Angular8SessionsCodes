@@ -1,0 +1,22 @@
+<p>bindings-demo works!</p>
+
+<h2>one way binding</h2>
+<h3>{{name}}  </h3>
+<input type="text" value="{{name}}">
+
+<hr>
+<h2>2 way binding</h2>
+ 
+<input type="text" [(ngModel)]="name">
+
+<input type="button" value="Click" 
+(click)="f1($event,$event)">
+
+<input type="button" value="Click2" 
+(click)="f1($event);f2()">
+
+<input [ngModel]="name" (ngModelChange)="name = $event" />
+
+ 
+
+ 

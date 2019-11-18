@@ -1,0 +1,23 @@
+.list {
+    background-color: gray;
+    color: white !important;
+    border-top: 1px solid black;
+    padding: 0.3rem;
+  }
+  
+  .description {
+    background-color: yellowgreen;
+    padding: 0.3rem;
+  }
+  
+  .title {
+    background-color: darkgreen;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+  }
+  
+  mat-card {
+    margin-top: 3px;
+    padding: 8px;
+  }

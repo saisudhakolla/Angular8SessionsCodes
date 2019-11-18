@@ -1,0 +1,64 @@
+<h3>Click here</h3><button (click)="toggle()">Toggle!</button>
+
+    
+<!--    <div *ngIf="showContents" *ngFor="let i of items">
+         <span>{{i}}</span>
+	</div>
+	
+	<ng-template [ngIf]="showContents">
+		<div *ngFor="let thing of items">
+		   
+		  <span>{{thing |json}}</span>
+		</div>
+	  </ng-template>
+  
+-->
+
+<ng-template>
+	You will never see me :(
+</ng-template>
+
+<ng-template *ngIf="showContents">
+	You still won’t see me (even though I’m using a structural directive, there’s nothing that's telling Angular to use me)
+</ng-template>
+
+<ng-template *ngFor="let item of items">
+	No dice (same reason as *ngIf above)
+</ng-template>
+
+<div *ngIf="!showContents else template">
+	Hello
+</div>
+
+<ng-template #template>
+	Finally I am seen! (When showContents is true)
+</ng-template>
+<hr>
+<h3>ng-container demos </h3>
+ 
+<ng-container>
+	You can see me! (Without any help from structural directives)
+  </ng-container>
+  
+  <table>
+	<tbody>
+	  <ng-container *ngFor="let item of items">
+		<tr *ngIf="item.id > 1">
+		  <td>{{item |json}}</td>
+		</tr>
+	  </ng-container>
+	</tbody>
+  </table>
+
+
+  <div style="border-style: dashed;border-color: red;"> this is the div tag
+	  <p>calling the template  using ngTemplateOutlet </p>
+	<ng-container *ngTemplateOutlet="mytemplate">
+	</ng-container>
+  </div>
+
+<ng-template #mytemplate>
+	Hello, i will be displayed in the div
+</ng-template>
+
+ 

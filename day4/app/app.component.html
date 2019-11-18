@@ -1,0 +1,42 @@
+<!--
+<first-cmp></first-cmp>
+<hr>
+<app-hello></app-hello>
+<hr>
+<app-bindings-demo></app-bindings-demo>
+ <ngfor-example></ngfor-example>
+ <for-if></for-if>
+ <template-cmp></template-cmp>
+ <track-by-cmp></track-by-cmp>
+ <app-template-demos></app-template-demos>
+  <pipes-Demo></pipes-Demo>
+  <app-template-demos></app-template-demos>
+  <styles-cmp></styles-cmp>
+
+
+<span appMakeitbold> this is span </span>
+
+<h1 appMakeitbold>this is h1</h1>
+
+<h3 appMakeitbold changeColor>this is h3</h3>
+
+<span>this another span tag</span>
+
+
+<hr>
+ 
+ <class-cmp></class-cmp>
+ -->
+ <hr>
+ <h3>pipes demo </h3>
+ {{title1 |uppercase | reverseStr}}
+ {{title2 | lowercase |reverseStr}}
+
+ <h4>1. Today is {{today}}</h4>
+ <h4>2. Today is {{today | date}}</h4>
+ <h4>3. Today is {{today | date:"dd/MM/yyyy"}}</h4>
+
+ <p>default value of {{x}} </p>
+ <p>transformed value of {{x|number}} </p>
+ <p>transformed value of  {{x | number:'3.2-5'}}  </p>
+ <p>transformed value of  {{y | number:'3.2-5'}}  </p>
