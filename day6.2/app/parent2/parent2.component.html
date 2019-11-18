@@ -1,0 +1,10 @@
+<p>parent2 works!</p>
+
+<div>
+    <app-hello name="World"></app-hello>
+    <app-hello name="Other World"></app-hello>
+    <app-hello #last name="Last World"></app-hello>
+  </div>
+  <button (click)="onClickAll()">Randomize Hello colors</button>
+  <button (click)="onClickLast()">Randomize only last Hello color</button>
+  <p>Calls function on child component classes to randomize color of them.</p>

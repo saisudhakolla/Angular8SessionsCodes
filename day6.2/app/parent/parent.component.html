@@ -1,0 +1,13 @@
+<p>parent works!</p>
+<div style="border-style:dashed;
+border-color:rebeccapurple;">
+    this is parent cmp
+    <input type="button" 
+    value="Generate a RandomNO"
+    (click)="generateRandom()">
+    
+    <span >loading the child</span>
+    
+    <app-child [randomNo]=result (notify)="getDatafromChild($event)">   </app-child>
+<span> data from child component is {{datafromChild}}</span>
+</div>
